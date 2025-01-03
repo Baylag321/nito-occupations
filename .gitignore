@@ -7,7 +7,7 @@ server_config
 .DS_Store
 *.DS_Store
 tmp
-.env
+
 go.sum
 *.toml
 node_modules
