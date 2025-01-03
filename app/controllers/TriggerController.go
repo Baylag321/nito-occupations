@@ -1,33 +1,34 @@
 package controllers
 
 import (
-    gonanoid "github.com/matoous/go-nanoid/v2"
-    "lambda/lambda/models/form/formModels"
+	"lambda/lambda/models/form/formModels"
+
+	gonanoid "github.com/matoous/go-nanoid/v2"
 )
 
 func NewAfterUpdate(newData interface{}) {
-    //news := newData.(*formModels.EoNews29)
-
+	//news := newData.(*formModels.EoNews29)
+	//
 }
 
-func BeforeUpdate(newData interface{})  {
-    data:=newData.(*formModels.Occupations1)
+func BeforeUpdate(newData interface{}) {
+	data := newData.(*formModels.Occupations1)
 
-    newID, err := gonanoid.Generate("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 26)
-    if err != nil {
-        return
-    }
+	newID, err := gonanoid.Generate("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 26)
+	if err != nil {
+		return
+	}
 
-    data.ID = newID
+	data.ID = newID
 }
 
-func BeforeUpdateSub(newData interface{})  {
-    data:=newData.(*formModels.Occupations5)
+func BeforeUpdateSub(newData interface{}) {
+	data := newData.(*formModels.Occupations5)
 
-    newID, err := gonanoid.Generate("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 26)
-    if err != nil {
-        return
-    }
+	newID, err := gonanoid.Generate("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 26)
+	if err != nil {
+		return
+	}
 
-    data.ID = newID
+	data.ID = newID
 }
